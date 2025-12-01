@@ -1,0 +1,25 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="erdbeereGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e63946;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="waffle4" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#d4a574"/>
+      <line x1="0" y1="0" x2="20" y2="20" stroke="#b8956a" stroke-width="1"/>
+      <line x1="20" y1="0" x2="0" y2="20" stroke="#b8956a" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <rect width="400" height="300" fill="#f5f5f5"/>
+  
+  <path d="M 200 280 L 160 140 L 240 140 Z" fill="url(#waffle4)" stroke="#a68a64" stroke-width="2"/>
+  
+  <circle cx="200" cy="120" r="45" fill="url(#erdbeereGrad)" stroke="#c9184a" stroke-width="2"/>
+  <ellipse cx="185" cy="115" rx="15" ry="20" fill="#ffb3c6" opacity="0.6"/>
+  
+  <!-- Strawberry pieces -->
+  <ellipse cx="195" cy="120" rx="4" ry="5" fill="#c9184a"/>
+  <ellipse cx="210" cy="125" rx="3" ry="4" fill="#c9184a"/>
+  <ellipse cx="205" cy="115" rx="3" ry="4" fill="#c9184a"/>
+</svg>

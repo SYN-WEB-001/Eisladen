@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Box, Container, Typography, Card, CardContent, Avatar, Rating } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { Box, Container, Typography, Card, CardContent, Avatar, Rating, Button } from '@mui/material';
 
 function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('/testimonials.json')
@@ -12,9 +14,9 @@ function Testimonials() {
   }, []);
 
   return (
-    <Box sx={{ py: 8, bgcolor: '#f5f5f5' }}>
+    <Box id="testimonials" sx={{ py: 8, bgcolor: '#ffffff' }}>
       <Container>
-        <Typography variant="h3" component="h2" align="center" gutterBottom>
+        <Typography variant="h3" component="h2" align="center" gutterBottom sx={{ color: '#000000' }}>
           Was unsere Kunden sagen
         </Typography>
         <Box
@@ -33,7 +35,7 @@ function Testimonials() {
             <Card key={index} sx={{ height: '100%' }}>
               <CardContent>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                  <Avatar sx={{ mr: 2 }}>{testimonial.name[0]}</Avatar>
+                  <Avatar sx={{ mr: 2, bgcolor: '#558B2F' }}>{testimonial.name[0]}</Avatar>
                   <Box>
                     <Typography variant="h6">{testimonial.name}</Typography>
                     <Rating value={testimonial.rating} readOnly size="small" />
@@ -45,6 +47,19 @@ function Testimonials() {
               </CardContent>
             </Card>
           ))}
+        </Box>
+        <Box sx={{ textAlign: 'center', mt: 4 }}>
+          <Button
+            variant="contained"
+            size="large"
+            onClick={() => navigate('/bewertungen')}
+            sx={{
+              bgcolor: '#558B2F',
+              '&:hover': { bgcolor: '#3d6921' },
+            }}
+          >
+            Alle Bewertungen anzeigen
+          </Button>
         </Box>
       </Container>
     </Box>

@@ -1,0 +1,25 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="vanilleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff9e6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5e6c3;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="waffle3" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#d4a574"/>
+      <line x1="0" y1="0" x2="20" y2="20" stroke="#b8956a" stroke-width="1"/>
+      <line x1="20" y1="0" x2="0" y2="20" stroke="#b8956a" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <rect width="400" height="300" fill="#f5f5f5"/>
+  
+  <path d="M 200 280 L 160 140 L 240 140 Z" fill="url(#waffle3)" stroke="#a68a64" stroke-width="2"/>
+  
+  <circle cx="200" cy="120" r="45" fill="url(#vanilleGrad)" stroke="#e6d5a8" stroke-width="2"/>
+  <ellipse cx="185" cy="115" rx="15" ry="20" fill="white" opacity="0.5"/>
+  
+  <!-- Vanilla specks -->
+  <line x1="195" y1="115" x2="195" y2="125" stroke="#333" stroke-width="0.5" opacity="0.6"/>
+  <line x1="205" y1="118" x2="205" y2="128" stroke="#333" stroke-width="0.5" opacity="0.6"/>
+  <line x1="200" y1="125" x2="200" y2="133" stroke="#333" stroke-width="0.5" opacity="0.6"/>
+</svg>

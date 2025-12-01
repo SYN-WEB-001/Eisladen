@@ -66,10 +66,25 @@ function DetailSeite() {
 
         <Card sx={{ mb: 4 }}>
           <Box
+            component="img"
+            src={sorte.bild}
+            alt={sorte.name}
+            sx={{
+              width: '100%',
+              height: 300,
+              objectFit: 'cover',
+              bgcolor: '#e0e0e0',
+            }}
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextElementSibling.style.display = 'flex';
+            }}
+          />
+          <Box
             sx={{
               height: 300,
               bgcolor: '#e0e0e0',
-              display: 'flex',
+              display: 'none',
               alignItems: 'center',
               justifyContent: 'center',
             }}

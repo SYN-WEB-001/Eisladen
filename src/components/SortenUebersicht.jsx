@@ -49,17 +49,30 @@ function SortenUebersicht() {
               onClick={() => navigate(`/sorte/${sorte.slug}`)}
             >
               <CardMedia
-                component="div"
+                component="img"
+                height="200"
+                image={sorte.bild || '/placeholder.jpg'}
+                alt={sorte.name}
+                sx={{
+                  objectFit: 'cover',
+                  bgcolor: '#e0e0e0',
+                }}
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextElementSibling.style.display = 'flex';
+                }}
+              />
+              <Box
                 sx={{
                   height: 200,
                   bgcolor: '#e0e0e0',
-                  display: 'flex',
+                  display: 'none',
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}
               >
                 <Typography variant="h4">🍦</Typography>
-              </CardMedia>
+              </Box>
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', mb: 1 }}>
                   <Typography variant="h5" component="h3">

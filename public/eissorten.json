@@ -4,56 +4,56 @@
     "name": "Pistazie",
     "beschreibung": "Cremige sizilianische Pistazie, täglich frisch gemahlen.",
     "kategorie": "Milch",
-    "bild": "/pistazie.jpg"
+    "bild": "/pistazie.svg"
   },
   {
     "slug": "schokolade",
     "name": "Schokolade",
     "beschreibung": "Dunkle belgische Schokolade mit intensivem Geschmack.",
     "kategorie": "Milch",
-    "bild": "/schokolade.jpg"
+    "bild": "/schokolade.svg"
   },
   {
     "slug": "vanille",
     "name": "Vanille",
     "beschreibung": "Klassische Bourbon-Vanille aus Madagaskar.",
     "kategorie": "Klassiker",
-    "bild": "/vanille.jpg"
+    "bild": "/vanille.svg"
   },
   {
     "slug": "erdbeere",
     "name": "Erdbeere",
     "beschreibung": "Frische Erdbeeren aus regionalem Anbau.",
     "kategorie": "Sorbet",
-    "bild": "/erdbeere.jpg"
+    "bild": "/erdbeere.svg"
   },
   {
     "slug": "zitrone",
     "name": "Zitrone",
     "beschreibung": "Erfrischendes Zitronensorbet ohne Milch.",
     "kategorie": "Vegan",
-    "bild": "/zitrone.jpg"
+    "bild": "/zitrone.svg"
   },
   {
     "slug": "haselnuss",
     "name": "Haselnuss",
     "beschreibung": "Geröstete Haselnüsse aus dem Piemont.",
     "kategorie": "Milch",
-    "bild": "/haselnuss.jpg"
+    "bild": "/haselnuss.svg"
   },
   {
     "slug": "mango",
     "name": "Mango",
     "beschreibung": "Tropische Mango, cremig und fruchtig.",
     "kategorie": "Sorbet",
-    "bild": "/mango.jpg"
+    "bild": "/mango.svg"
   },
   {
     "slug": "kirsche",
     "name": "Kirsche",
     "beschreibung": "Süße Kirschen mit Stückchen, saisonal verfügbar.",
     "kategorie": "Saison",
-    "bild": "/kirsche.jpg"
+    "bild": "/kirsche.svg"
   }
 ]
 

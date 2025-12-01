@@ -1,0 +1,25 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="haselnussGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c4a57b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9d8264;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="waffle6" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#d4a574"/>
+      <line x1="0" y1="0" x2="20" y2="20" stroke="#b8956a" stroke-width="1"/>
+      <line x1="20" y1="0" x2="0" y2="20" stroke="#b8956a" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <rect width="400" height="300" fill="#f5f5f5"/>
+  
+  <path d="M 200 280 L 160 140 L 240 140 Z" fill="url(#waffle6)" stroke="#a68a64" stroke-width="2"/>
+  
+  <circle cx="200" cy="120" r="45" fill="url(#haselnussGrad)" stroke="#8b7355" stroke-width="2"/>
+  <ellipse cx="185" cy="115" rx="15" ry="20" fill="#d4b896" opacity="0.5"/>
+  
+  <!-- Hazelnut pieces -->
+  <ellipse cx="192" cy="120" rx="4" ry="5" fill="#6b5642"/>
+  <ellipse cx="208" cy="125" rx="4" ry="4" fill="#6b5642"/>
+  <ellipse cx="203" cy="115" rx="3" ry="4" fill="#6b5642"/>
+</svg>

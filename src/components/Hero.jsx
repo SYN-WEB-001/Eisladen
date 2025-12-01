@@ -4,7 +4,7 @@ function Hero() {
   return (
     <Box
       sx={{
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'linear-gradient(135deg, #8BC34A 0%, #558B2F 100%)',
         color: 'white',
         py: 10,
         textAlign: 'center',
@@ -12,7 +12,7 @@ function Hero() {
     >
       <Container>
         <Typography variant="h1" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
-          Gelateria Fiorentina
+          Selbstgemachtes Eis seit 2025
         </Typography>
         <Typography variant="h5" component="p" sx={{ mb: 4, maxWidth: '600px', mx: 'auto' }}>
           Täglich frisches Eis aus der Innenstadt – mit Liebe gemacht seit Generationen
@@ -22,7 +22,7 @@ function Hero() {
           size="large"
           sx={{
             bgcolor: 'white',
-            color: '#667eea',
+            color: '#558B2F',
             '&:hover': { bgcolor: '#f5f5f5' },
           }}
           onClick={() => {
