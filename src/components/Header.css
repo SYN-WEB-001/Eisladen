@@ -36,7 +36,7 @@
 }
 
 .logo-text {
-  color: #558B2F;
+  color: #0288D1;
 }
 
 .nav {
@@ -60,12 +60,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #558B2F;
+  background-color: #0288D1;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #558B2F;
+  color: #0288D1;
 }
 
 .nav-link:hover::after {

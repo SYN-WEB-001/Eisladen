@@ -54,6 +54,34 @@
     "beschreibung": "Süße Kirschen mit Stückchen, saisonal verfügbar.",
     "kategorie": "Saison",
     "bild": "/kirsche.svg"
+  },
+  {
+    "slug": "stracciatella",
+    "name": "Stracciatella",
+    "beschreibung": "Cremiges Milcheis mit feinen Schokoladensplittern.",
+    "kategorie": "Klassiker",
+    "bild": "/stracciatella.svg"
+  },
+  {
+    "slug": "joghurt",
+    "name": "Joghurt",
+    "beschreibung": "Erfrischendes Naturjoghurteis, leicht säuerlich.",
+    "kategorie": "Milch",
+    "bild": "/joghurt.svg"
+  },
+  {
+    "slug": "himbeere",
+    "name": "Himbeere",
+    "beschreibung": "Intensive Himbeeren, fruchtig und nicht zu süß.",
+    "kategorie": "Sorbet",
+    "bild": "/himbeere.svg"
+  },
+  {
+    "slug": "cookies",
+    "name": "Cookies & Cream",
+    "beschreibung": "Vanilleeis mit knusprigen Keksstückchen.",
+    "kategorie": "Milch",
+    "bild": "/cookies.svg"
   }
 ]
 

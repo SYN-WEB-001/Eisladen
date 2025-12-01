@@ -35,7 +35,7 @@ function Testimonials() {
             <Card key={index} sx={{ height: '100%' }}>
               <CardContent>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                  <Avatar sx={{ mr: 2, bgcolor: '#558B2F' }}>{testimonial.name[0]}</Avatar>
+                  <Avatar sx={{ mr: 2, bgcolor: '#0288D1' }}>{testimonial.name[0]}</Avatar>
                   <Box>
                     <Typography variant="h6">{testimonial.name}</Typography>
                     <Rating value={testimonial.rating} readOnly size="small" />
@@ -54,8 +54,8 @@ function Testimonials() {
             size="large"
             onClick={() => navigate('/bewertungen')}
             sx={{
-              bgcolor: '#558B2F',
-              '&:hover': { bgcolor: '#3d6921' },
+              bgcolor: '#0288D1',
+              '&:hover': { bgcolor: '#0277BD' },
             }}
           >
             Alle Bewertungen anzeigen

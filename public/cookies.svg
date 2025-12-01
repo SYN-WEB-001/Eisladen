@@ -1,0 +1,27 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cookiesGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e8e8;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="waffle12" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#d4a574"/>
+      <line x1="0" y1="0" x2="20" y2="20" stroke="#b8956a" stroke-width="1"/>
+      <line x1="20" y1="0" x2="0" y2="20" stroke="#b8956a" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <rect width="400" height="300" fill="#f5f5f5"/>
+  
+  <path d="M 200 280 L 160 140 L 240 140 Z" fill="url(#waffle12)" stroke="#a68a64" stroke-width="2"/>
+  
+  <circle cx="200" cy="120" r="45" fill="url(#cookiesGrad)" stroke="#d0d0d0" stroke-width="2"/>
+  <ellipse cx="185" cy="115" rx="15" ry="20" fill="white" opacity="0.5"/>
+  
+  <!-- Cookie pieces -->
+  <rect x="192" y="110" width="6" height="6" rx="1" fill="#2c1810"/>
+  <rect x="205" y="118" width="7" height="7" rx="1" fill="#2c1810"/>
+  <rect x="188" y="125" width="5" height="5" rx="1" fill="#2c1810"/>
+  <rect x="208" y="128" width="4" height="4" rx="1" fill="#2c1810"/>
+  <rect x="198" y="120" width="4" height="4" rx="1" fill="#2c1810"/>
+</svg>

@@ -4,7 +4,7 @@ function Hero() {
   return (
     <Box
       sx={{
-        background: 'linear-gradient(135deg, #8BC34A 0%, #558B2F 100%)',
+        background: 'linear-gradient(135deg, #4FC3F7 0%, #0288D1 100%)',
         color: 'white',
         py: 10,
         textAlign: 'center',
@@ -22,7 +22,7 @@ function Hero() {
           size="large"
           sx={{
             bgcolor: 'white',
-            color: '#558B2F',
+            color: '#0288D1',
             '&:hover': { bgcolor: '#f5f5f5' },
           }}
           onClick={() => {
