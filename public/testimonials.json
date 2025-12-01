@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Maria Schmidt",
+    "text": "Das beste Eis der Stadt! Die Pistazie ist einfach unwiderstehlich.",
+    "avatar": "/avatar1.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Thomas Weber",
+    "text": "Familiengeführt und mit viel Liebe gemacht. Unser Lieblingsladen!",
+    "avatar": "/avatar2.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Lisa Müller",
+    "text": "Die veganen Sorten sind genauso lecker wie die klassischen. Perfekt!",
+    "avatar": "/avatar3.jpg",
+    "rating": 5
+  },
+  {
+    "name": "Peter Klein",
+    "text": "Täglich frisch zubereitet - man schmeckt den Unterschied sofort.",
+    "avatar": "/avatar4.jpg",
+    "rating": 5
+  }
+]
+
