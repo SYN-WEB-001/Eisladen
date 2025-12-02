@@ -62,17 +62,7 @@ function SortenUebersicht() {
                   e.target.nextElementSibling.style.display = 'flex';
                 }}
               />
-              <Box
-                sx={{
-                  height: 200,
-                  bgcolor: '#e0e0e0',
-                  display: 'none',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <Typography variant="h4">🍦</Typography>
-              </Box>
+           
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', mb: 1 }}>
                   <Typography variant="h5" component="h3">
