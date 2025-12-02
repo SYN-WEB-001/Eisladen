@@ -1,7 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Box, Button, Container } from '@mui/material';
 
 function Header() {
+  const location = useLocation();
+  const isBewertungenPage = location.pathname === '/bewertungen';
+  const isDetailPage = location.pathname.startsWith('/sorte/');
+  const shouldHideSorten = isBewertungenPage || isDetailPage;
+
   return (
     <AppBar
       position="sticky"
@@ -95,36 +100,38 @@ function Header() {
             >
               Home
             </Button>
-            <Button
-              component="a"
-              href="#sorten"
-              sx={{
-                color: '#333',
-                fontWeight: 500,
-                textTransform: 'none',
-                fontSize: { xs: '0.9rem', sm: '1rem' },
-                position: 'relative',
-                '&::after': {
-                  content: '""',
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  width: 0,
-                  height: '2px',
-                  bgcolor: '#0288D1',
-                  transition: 'width 0.3s ease',
-                },
-                '&:hover': {
-                  color: '#0288D1',
-                  bgcolor: 'transparent',
+            {!shouldHideSorten && (
+              <Button
+                component="a"
+                href="#sorten"
+                sx={{
+                  color: '#333',
+                  fontWeight: 500,
+                  textTransform: 'none',
+                  fontSize: { xs: '0.9rem', sm: '1rem' },
+                  position: 'relative',
                   '&::after': {
-                    width: '100%',
+                    content: '""',
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    width: 0,
+                    height: '2px',
+                    bgcolor: '#0288D1',
+                    transition: 'width 0.3s ease',
                   },
-                },
-              }}
-            >
-              Sorten
-            </Button>
+                  '&:hover': {
+                    color: '#0288D1',
+                    bgcolor: 'transparent',
+                    '&::after': {
+                      width: '100%',
+                    },
+                  },
+                }}
+              >
+                Sorten
+              </Button>
+            )}
             <Button
               component={Link}
               to="/bewertungen"

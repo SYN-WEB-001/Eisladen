@@ -4,84 +4,252 @@
     "name": "Pistazie",
     "beschreibung": "Cremige sizilianische Pistazie, täglich frisch gemahlen.",
     "kategorie": "Milch",
-    "bild": "/pistazien.png"
+    "bild": "/img/pistazien.png",
+    "rezensionen": [
+      {
+        "name": "Anna M.",
+        "text": "Absolut köstlich! Die cremigste Konsistenz, die ich je probiert habe. Die Pistazie schmeckt so authentisch!",
+        "rating": 5,
+        "datum": "2024-01-15"
+      },
+      {
+        "name": "Max K.",
+        "text": "Sehr empfehlenswert! Perfekter Geschmack und Qualität. Meine Lieblingssorte!",
+        "rating": 5,
+        "datum": "2024-01-10"
+      }
+    ]
   },
   {
     "slug": "schokolade",
     "name": "Schokolade",
     "beschreibung": "Dunkle belgische Schokolade mit intensivem Geschmack.",
     "kategorie": "Milch",
-    "bild": "/Schokoladeneis.jpeg"
+    "bild": "/img/Schokoladeneis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Sarah L.",
+        "text": "Intensiver Schokoladengeschmack! Für alle Schokoladenliebhaber ein absolutes Muss.",
+        "rating": 5,
+        "datum": "2024-01-20"
+      },
+      {
+        "name": "Tom R.",
+        "text": "Sehr cremig und nicht zu süß. Die belgische Schokolade macht den Unterschied!",
+        "rating": 5,
+        "datum": "2024-01-18"
+      }
+    ]
   },
   {
     "slug": "vanille",
     "name": "Vanille",
     "beschreibung": "Klassische Bourbon-Vanille aus Madagaskar.",
     "kategorie": "Klassiker",
-    "bild": "/Vanilleeis.jpeg"
+    "bild": "/img/Vanilleeis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Lisa W.",
+        "text": "Die beste Vanille, die ich je probiert habe! Man schmeckt die echten Vanilleschoten.",
+        "rating": 5,
+        "datum": "2024-01-22"
+      },
+      {
+        "name": "Peter H.",
+        "text": "Klassisch und perfekt! Ein echter Klassiker, der nie enttäuscht.",
+        "rating": 5,
+        "datum": "2024-01-19"
+      }
+    ]
   },
   {
     "slug": "erdbeere",
     "name": "Erdbeere",
     "beschreibung": "Frische Erdbeeren aus regionalem Anbau.",
     "kategorie": "Sorbet",
-    "bild": "/Erdbeereis.jpeg"
+    "bild": "/img/Erdbeereis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Maria S.",
+        "text": "So fruchtig und frisch! Man schmeckt die echten Erdbeeren in jedem Löffel.",
+        "rating": 5,
+        "datum": "2024-01-21"
+      },
+      {
+        "name": "Jan M.",
+        "text": "Perfekt für den Sommer! Erfrischend und nicht zu süß.",
+        "rating": 4,
+        "datum": "2024-01-17"
+      }
+    ]
   },
   {
     "slug": "zitrone",
     "name": "Zitrone",
     "beschreibung": "Erfrischendes Zitronensorbet ohne Milch.",
     "kategorie": "Vegan",
-    "bild": "/Zitroneneis.jpeg"
+    "bild": "/img/Zitroneneis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Emma K.",
+        "text": "Super erfrischend! Perfekt für heiße Tage. Und vegan - genau das Richtige für mich!",
+        "rating": 5,
+        "datum": "2024-01-23"
+      },
+      {
+        "name": "David F.",
+        "text": "Sehr sauer, aber genau richtig! Ein echter Geschmackskick.",
+        "rating": 4,
+        "datum": "2024-01-16"
+      }
+    ]
   },
   {
     "slug": "haselnuss",
     "name": "Haselnuss",
     "beschreibung": "Geröstete Haselnüsse aus dem Piemont.",
     "kategorie": "Milch",
-    "bild": "/Haselnusseis.jpeg"
+    "bild": "/img/Haselnusseis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Sophie B.",
+        "text": "Die gerösteten Haselnüsse geben einen wunderbaren Geschmack! Sehr nussig und cremig.",
+        "rating": 5,
+        "datum": "2024-01-24"
+      },
+      {
+        "name": "Michael T.",
+        "text": "Intensiver Haselnussgeschmack! Eine meiner Lieblingssorten.",
+        "rating": 5,
+        "datum": "2024-01-20"
+      }
+    ]
   },
   {
     "slug": "mango",
     "name": "Mango",
     "beschreibung": "Tropische Mango, cremig und fruchtig.",
     "kategorie": "Sorbet",
-    "bild": "/Mangoeis.jpeg"
+    "bild": "/img/Mangoeis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Julia R.",
+        "text": "Tropisches Paradies! Die Mango schmeckt so authentisch, als wäre sie frisch gepflückt.",
+        "rating": 5,
+        "datum": "2024-01-25"
+      },
+      {
+        "name": "Chris P.",
+        "text": "Cremig und fruchtig zugleich. Ein perfekter Geschmack für den Sommer!",
+        "rating": 5,
+        "datum": "2024-01-22"
+      }
+    ]
   },
   {
     "slug": "kirsche",
     "name": "Kirsche",
     "beschreibung": "Süße Kirschen mit Stückchen, saisonal verfügbar.",
     "kategorie": "Saison",
-    "bild": "/Kirscheis.jpeg"
+    "bild": "/img/Kirscheis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Nina G.",
+        "text": "Die Kirschstückchen sind der Hit! So saftig und lecker. Leider nur saisonal verfügbar.",
+        "rating": 5,
+        "datum": "2024-01-26"
+      },
+      {
+        "name": "Oliver S.",
+        "text": "Perfekt süß mit echten Fruchtstückchen. Eine echte Delikatesse!",
+        "rating": 5,
+        "datum": "2024-01-23"
+      }
+    ]
   },
   {
     "slug": "stracciatella",
     "name": "Stracciatella",
     "beschreibung": "Cremiges Milcheis mit feinen Schokoladensplittern.",
     "kategorie": "Klassiker",
-    "bild": "/Stracciatellaeis.jpeg"
+    "bild": "/img/Stracciatellaeis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Laura M.",
+        "text": "Die Schokoladensplitter sind perfekt verteilt! Cremig und knusprig zugleich.",
+        "rating": 5,
+        "datum": "2024-01-27"
+      },
+      {
+        "name": "Felix K.",
+        "text": "Ein echter Klassiker! Die perfekte Balance zwischen Milcheis und Schokolade.",
+        "rating": 5,
+        "datum": "2024-01-24"
+      }
+    ]
   },
   {
     "slug": "joghurt",
     "name": "Joghurt",
     "beschreibung": "Erfrischendes Naturjoghurteis, leicht säuerlich.",
     "kategorie": "Milch",
-    "bild": "/Joghurteis.jpeg"
+    "bild": "/img/Joghurteis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Clara D.",
+        "text": "So erfrischend! Die leichte Säure ist perfekt. Ideal nach einem schweren Essen.",
+        "rating": 5,
+        "datum": "2024-01-28"
+      },
+      {
+        "name": "Ben W.",
+        "text": "Nicht zu süß, genau richtig! Ein erfrischender Genuss.",
+        "rating": 4,
+        "datum": "2024-01-25"
+      }
+    ]
   },
   {
     "slug": "himbeere",
     "name": "Himbeere",
     "beschreibung": "Intensive Himbeeren, fruchtig und nicht zu süß.",
     "kategorie": "Sorbet",
-    "bild": "/Himbeereis.jpeg"
+    "bild": "/img/Himbeereis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Amelie V.",
+        "text": "Intensiver Himbeergeschmack! Fruchtig und nicht zu süß - genau wie beschrieben.",
+        "rating": 5,
+        "datum": "2024-01-29"
+      },
+      {
+        "name": "Lukas H.",
+        "text": "Perfekt für alle, die es nicht zu süß mögen. Sehr fruchtig und lecker!",
+        "rating": 5,
+        "datum": "2024-01-26"
+      }
+    ]
   },
   {
     "slug": "cookies",
     "name": "Cookies & Cream",
     "beschreibung": "Vanilleeis mit knusprigen Keksstückchen.",
     "kategorie": "Milch",
-    "bild": "/Cookieseis.jpeg"
+    "bild": "/img/Cookieseis.jpeg",
+    "rezensionen": [
+      {
+        "name": "Mia L.",
+        "text": "Die Keksstückchen sind so knusprig! Eine perfekte Kombination aus cremig und knusprig.",
+        "rating": 5,
+        "datum": "2024-01-30"
+      },
+      {
+        "name": "Noah B.",
+        "text": "Meine absolute Lieblingssorte! Die Keksstückchen machen es perfekt.",
+        "rating": 5,
+        "datum": "2024-01-27"
+      }
+    ]
   }
 ]
 

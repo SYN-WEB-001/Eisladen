@@ -25,24 +25,14 @@ function DetailSeite() {
       .then(data => {
         const gefundeneSorte = data.find(s => s.slug === slug);
         setSorte(gefundeneSorte);
+        // Lädt Rezensionen aus den Daten der Sorte
+        if (gefundeneSorte && gefundeneSorte.rezensionen) {
+          setRezensionen(gefundeneSorte.rezensionen);
+        } else {
+          setRezensionen([]);
+        }
       })
       .catch(err => console.error('Fehler beim Laden:', err));
-
-    // Beispiel-Rezensionen (könnten auch aus JSON kommen)
-    setRezensionen([
-      {
-        name: 'Anna M.',
-        text: 'Absolut köstlich! Die cremigste Konsistenz, die ich je probiert habe.',
-        rating: 5,
-        datum: '2024-01-15'
-      },
-      {
-        name: 'Max K.',
-        text: 'Sehr empfehlenswert! Perfekter Geschmack und Qualität.',
-        rating: 5,
-        datum: '2024-01-10'
-      }
-    ]);
   }, [slug]);
 
   if (!sorte) {
@@ -80,17 +70,7 @@ function DetailSeite() {
               e.target.nextElementSibling.style.display = 'flex';
             }}
           />
-          <Box
-            sx={{
-              height: 300,
-              bgcolor: '#e0e0e0',
-              display: 'none',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Typography variant="h1">🍦</Typography>
-          </Box>
+         
           <CardContent>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', mb: 2 }}>
               <Typography variant="h3" component="h1">
@@ -109,20 +89,26 @@ function DetailSeite() {
         </Typography>
         <Divider sx={{ mb: 3 }} />
 
-        {rezensionen.map((rezension, index) => (
-          <Card key={index} sx={{ mb: 2 }}>
-            <CardContent>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                <Typography variant="h6">{rezension.name}</Typography>
-                <Rating value={rezension.rating} readOnly size="small" />
-              </Box>
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                {rezension.datum}
-              </Typography>
-              <Typography variant="body1">{rezension.text}</Typography>
-            </CardContent>
-          </Card>
-        ))}
+        {rezensionen.length > 0 ? (
+          rezensionen.map((rezension, index) => (
+            <Card key={index} sx={{ mb: 2 }}>
+              <CardContent>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+                  <Typography variant="h6">{rezension.name}</Typography>
+                  <Rating value={rezension.rating} readOnly size="small" />
+                </Box>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                  {rezension.datum}
+                </Typography>
+                <Typography variant="body1">{rezension.text}</Typography>
+              </CardContent>
+            </Card>
+          ))
+        ) : (
+          <Typography variant="body1" color="text.secondary" sx={{ py: 4, textAlign: 'center' }}>
+            Noch keine Rezensionen vorhanden.
+          </Typography>
+        )}
       </Container>
     </Box>
   );

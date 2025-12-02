@@ -16,6 +16,9 @@ import {
   Grid,
   LinearProgress,
   Chip,
+  TextField,
+  Alert,
+  Snackbar,
 } from '@mui/material';
 // Material-UI Icons
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -28,14 +31,28 @@ import StarIcon from '@mui/icons-material/Star';
 function BewertungenSeite() {
   // State für die Liste aller Testimonials/Bewertungen
   const [testimonials, setTestimonials] = useState([]);
+  // State für Formularfelder
+  const [formData, setFormData] = useState({
+    name: '',
+    text: '',
+    rating: 0,
+  });
+  // State für Snackbar (Benachrichtigung)
+  const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
   // Hook für Navigation zu anderen Seiten
   const navigate = useNavigate();
 
   // Side Effect: Lädt die Bewertungen beim ersten Rendern der Komponente
   useEffect(() => {
+    // Lädt Bewertungen aus JSON-Datei
     fetch('/testimonials.json')
       .then(res => res.json())
-      .then(data => setTestimonials(data))
+      .then(jsonData => {
+        // Lädt zusätzliche Bewertungen aus localStorage
+        const localReviews = JSON.parse(localStorage.getItem('localReviews') || '[]');
+        // Kombiniert beide Quellen
+        setTestimonials([...jsonData, ...localReviews]);
+      })
       .catch(err => console.error('Fehler beim Laden der Testimonials:', err));
   }, []);
 
@@ -64,6 +81,77 @@ initialValue (у тебя 0) — начальное значение аккум�
   const getAvatarColor = (index) => {
     const colors = ['#0288D1', '#4FC3F7', '#FFA726', '#FF6B9D', '#42A5F5'];
     return colors[index % colors.length];
+  };
+
+  // Handler für Formular-Änderungen
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  // Handler für Rating-Änderung
+  const handleRatingChange = (event, newValue) => {
+    setFormData(prev => ({
+      ...prev,
+      rating: newValue || 0
+    }));
+  };
+
+  // Handler für Formular-Submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Validierung
+    if (!formData.name.trim() || !formData.text.trim() || formData.rating === 0) {
+      setSnackbar({
+        open: true,
+        message: 'Bitte füllen Sie alle Felder aus und geben Sie eine Bewertung ab.',
+        severity: 'error'
+      });
+      return;
+    }
+
+    // Erstellt neues Review-Objekt
+    const newReview = {
+      name: formData.name.trim(),
+      text: formData.text.trim(),
+      rating: formData.rating,
+      avatar: '', // Wird nicht verwendet, Avatar wird aus Initialen generiert
+    };
+
+    // Lädt vorhandene lokale Reviews
+    const localReviews = JSON.parse(localStorage.getItem('localReviews') || '[]');
+    
+    // Fügt neues Review hinzu
+    const updatedReviews = [...localReviews, newReview];
+    
+    // Speichert in localStorage
+    localStorage.setItem('localReviews', JSON.stringify(updatedReviews));
+    
+    // Aktualisiert State
+    setTestimonials(prev => [...prev, newReview]);
+    
+    // Setzt Formular zurück
+    setFormData({
+      name: '',
+      text: '',
+      rating: 0,
+    });
+
+    // Zeigt Erfolgsmeldung
+    setSnackbar({
+      open: true,
+      message: 'Vielen Dank für Ihre Bewertung!',
+      severity: 'success'
+    });
+  };
+
+  // Handler für Snackbar schließen
+  const handleCloseSnackbar = () => {
+    setSnackbar(prev => ({ ...prev, open: false }));
   };
 
   return (
@@ -261,32 +349,143 @@ initialValue (у тебя 0) — начальное значение аккум�
           ))}
         </Grid>
 
-        {/* Call to Action Sektion - Aufforderung zur Interaktion */}
-        <Box sx={{ textAlign: 'center', mt: 6, p: 4, bgcolor: 'white', borderRadius: 2 }}>
-          {/* Überschrift für Call to Action */}
-          <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold' }}>
-            Möchten Sie auch eine Bewertung abgeben?
-          </Typography>
-          {/* Beschreibungstext */}
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-            Teilen Sie Ihre Erfahrung mit unserem Eis!
-          </Typography>
-          {/* Button zur Navigation zur Startseite */}
-          <Button
-            variant="contained"
-            size="large"
-            onClick={() => navigate('/')}
-            sx={{
-              bgcolor: '#0288D1',
-              px: 4,
-              py: 1.5,
-              fontSize: '1.1rem',
-              '&:hover': { bgcolor: '#0277BD' },
-            }}
+        {/* Formular-Sektion für neue Bewertungen */}
+        <Card sx={{ mt: 6 }}>
+          <CardContent sx={{ p: 4 }}>
+            <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', mb: 3 }}>
+              Ihre Bewertung abgeben
+            </Typography>
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
+              Teilen Sie Ihre Erfahrung mit unserem Eis!
+            </Typography>
+            
+            <Box component="form" onSubmit={handleSubmit}>
+              <Grid container spacing={3}>
+                {/* Name-Feld */}
+                <Grid size={{ xs: 12, md: 6 }}>
+                  <TextField
+                    fullWidth
+                    label="Ihr Name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    variant="outlined"
+                    sx={{
+                      '& .MuiOutlinedInput-root': {
+                        '&:hover fieldset': {
+                          borderColor: '#4FC3F7',
+                        },
+                        '&.Mui-focused fieldset': {
+                          borderColor: '#0288D1',
+                        },
+                      },
+                    }}
+                  />
+                </Grid>
+                
+                {/* Rating-Feld */}
+                <Grid size={{ xs: 12, md: 6 }}>
+                  <Box>
+                    <Typography variant="body2" sx={{ mb: 1, color: 'text.secondary' }}>
+                      Ihre Bewertung
+                    </Typography>
+                    <Rating
+                      name="rating"
+                      value={formData.rating}
+                      onChange={handleRatingChange}
+                      size="large"
+                      sx={{
+                        '& .MuiRating-iconFilled': {
+                          color: '#FFA726',
+                        },
+                        '& .MuiRating-iconHover': {
+                          color: '#FFA726',
+                        },
+                      }}
+                    />
+                  </Box>
+                </Grid>
+                
+                {/* Text-Feld */}
+                <Grid size={{ xs: 12 }}>
+                  <TextField
+                    fullWidth
+                    label="Ihre Bewertung"
+                    name="text"
+                    value={formData.text}
+                    onChange={handleInputChange}
+                    required
+                    multiline
+                    rows={4}
+                    variant="outlined"
+                    placeholder="Erzählen Sie uns von Ihrem Erlebnis..."
+                    sx={{
+                      '& .MuiOutlinedInput-root': {
+                        '&:hover fieldset': {
+                          borderColor: '#4FC3F7',
+                        },
+                        '&.Mui-focused fieldset': {
+                          borderColor: '#0288D1',
+                        },
+                      },
+                    }}
+                  />
+                </Grid>
+                
+                {/* Submit-Button */}
+                <Grid size={{ xs: 12 }}>
+                  <Box sx={{ display: 'flex', gap: 2, justifyContent: 'flex-end' }}>
+                    <Button
+                      variant="outlined"
+                      onClick={() => navigate('/')}
+                      sx={{
+                        borderColor: '#0288D1',
+                        color: '#0288D1',
+                        '&:hover': {
+                          borderColor: '#0277BD',
+                          bgcolor: 'rgba(2, 136, 209, 0.04)',
+                        },
+                      }}
+                    >
+                      Zur Startseite
+                    </Button>
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      size="large"
+                      sx={{
+                        bgcolor: '#0288D1',
+                        px: 4,
+                        py: 1.5,
+                        fontSize: '1.1rem',
+                        '&:hover': { bgcolor: '#0277BD' },
+                      }}
+                    >
+                      Bewertung absenden
+                    </Button>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>
+          </CardContent>
+        </Card>
+
+        {/* Snackbar für Benachrichtigungen */}
+        <Snackbar
+          open={snackbar.open}
+          autoHideDuration={4000}
+          onClose={handleCloseSnackbar}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        >
+          <Alert
+            onClose={handleCloseSnackbar}
+            severity={snackbar.severity}
+            sx={{ width: '100%' }}
           >
-            Zur Startseite
-          </Button>
-        </Box>
+            {snackbar.message}
+          </Alert>
+        </Snackbar>
       </Container>
     </Box>
   );
