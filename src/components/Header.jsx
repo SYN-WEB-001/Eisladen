@@ -8,7 +8,7 @@ function Header() {
       sx={{
         bgcolor: '#ffffff',
         color: '#333',
-        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+        boxShadow: '0 2px 8px rgba(27, 24, 24, 0.1)',
         zIndex: 100,
       }}
     >
