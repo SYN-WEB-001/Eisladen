@@ -11,77 +11,77 @@
     "name": "Schokolade",
     "beschreibung": "Dunkle belgische Schokolade mit intensivem Geschmack.",
     "kategorie": "Milch",
-    "bild": "/schokolade.svg"
+    "bild": "/Schokoladeneis.jpeg"
   },
   {
     "slug": "vanille",
     "name": "Vanille",
     "beschreibung": "Klassische Bourbon-Vanille aus Madagaskar.",
     "kategorie": "Klassiker",
-    "bild": "/vanille.svg"
+    "bild": "/Vanilleeis.jpeg"
   },
   {
     "slug": "erdbeere",
     "name": "Erdbeere",
     "beschreibung": "Frische Erdbeeren aus regionalem Anbau.",
     "kategorie": "Sorbet",
-    "bild": "/erdbeere.svg"
+    "bild": "/Erdbeereis.jpeg"
   },
   {
     "slug": "zitrone",
     "name": "Zitrone",
     "beschreibung": "Erfrischendes Zitronensorbet ohne Milch.",
     "kategorie": "Vegan",
-    "bild": "/zitrone.svg"
+    "bild": "/Zitroneneis.jpeg"
   },
   {
     "slug": "haselnuss",
     "name": "Haselnuss",
     "beschreibung": "Geröstete Haselnüsse aus dem Piemont.",
     "kategorie": "Milch",
-    "bild": "/haselnuss.svg"
+    "bild": "/Haselnusseis.jpeg"
   },
   {
     "slug": "mango",
     "name": "Mango",
     "beschreibung": "Tropische Mango, cremig und fruchtig.",
     "kategorie": "Sorbet",
-    "bild": "/mango.svg"
+    "bild": "/Mangoeis.jpeg"
   },
   {
     "slug": "kirsche",
     "name": "Kirsche",
     "beschreibung": "Süße Kirschen mit Stückchen, saisonal verfügbar.",
     "kategorie": "Saison",
-    "bild": "/kirsche.svg"
+    "bild": "/Kirscheis.jpeg"
   },
   {
     "slug": "stracciatella",
     "name": "Stracciatella",
     "beschreibung": "Cremiges Milcheis mit feinen Schokoladensplittern.",
     "kategorie": "Klassiker",
-    "bild": "/stracciatella.svg"
+    "bild": "/Stracciatellaeis.jpeg"
   },
   {
     "slug": "joghurt",
     "name": "Joghurt",
     "beschreibung": "Erfrischendes Naturjoghurteis, leicht säuerlich.",
     "kategorie": "Milch",
-    "bild": "/joghurt.svg"
+    "bild": "/Joghurteis.jpeg"
   },
   {
     "slug": "himbeere",
     "name": "Himbeere",
     "beschreibung": "Intensive Himbeeren, fruchtig und nicht zu süß.",
     "kategorie": "Sorbet",
-    "bild": "/himbeere.svg"
+    "bild": "/Himbeereis.jpeg"
   },
   {
     "slug": "cookies",
     "name": "Cookies & Cream",
     "beschreibung": "Vanilleeis mit knusprigen Keksstückchen.",
     "kategorie": "Milch",
-    "bild": "/cookies.svg"
+    "bild": "/Cookieseis.jpeg"
   }
 ]
 
