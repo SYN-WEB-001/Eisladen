@@ -33,7 +33,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography variables and usage (keine Farben verändert) */
+/* Typography variables and usage  */
 :root {
   --font-sans: 'Baloo 2', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-hand: 'Amatic SC', 'Baloo 2', cursive;
