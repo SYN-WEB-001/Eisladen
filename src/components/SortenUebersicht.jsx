@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Box, Container, Typography, Card, CardContent, CardMedia, Chip } from '@mui/material';
+import { Box, Container, Typography, Card, CardContent, CardMedia, Chip, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 function SortenUebersicht() {
   const [sorten, setSorten] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('Alle');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,12 +25,67 @@ function SortenUebersicht() {
     return colors[kategorie] || 'default';
   };
 
+  const handleCategoryChange = (event, newCategory) => {
+    if (newCategory !== null) {
+      setSelectedCategory(newCategory);
+    }
+  };
+
+  const filteredSorten = selectedCategory === 'Alle' 
+    ? sorten 
+    : sorten.filter(sorte => sorte.kategorie === selectedCategory);
+
+  const categories = ['Alle', 'Milch', 'Vegan', 'Sorbet', 'Klassiker', 'Saison'];
+
   return (
     <Box id="sorten" sx={{ py: 8 }}>
       <Container>
         <Typography variant="h3" component="h2" align="center" gutterBottom>
           Unsere Eissorten
         </Typography>
+        
+        <Box sx={{ display: 'flex', justifyContent: 'center', my: 4 }}>
+          <ToggleButtonGroup
+            value={selectedCategory}
+            exclusive
+            onChange={handleCategoryChange}
+            aria-label="Eiskategorie auswählen"
+            sx={{
+              flexWrap: 'wrap',
+              gap: 1,
+              '& .MuiToggleButton-root': {
+                px: 3,
+                py: 1,
+                borderRadius: 2,
+                textTransform: 'none',
+                fontWeight: 500,
+              }
+            }}
+          >
+            {categories.map((category) => (
+              <ToggleButton 
+                key={category} 
+                value={category}
+                sx={{
+                  '&.Mui-selected': {
+                    bgcolor: '#0288D1',
+                    color: 'white',
+                    '&:hover': {
+                      bgcolor: '#0277BD',
+                    }
+                  }
+                }}
+              >
+                {category}
+              </ToggleButton>
+            ))}
+          </ToggleButtonGroup>
+        </Box>
+
+        <Typography variant="body1" align="center" color="text.secondary" sx={{ mb: 3 }}>
+          {filteredSorten.length} {filteredSorten.length === 1 ? 'Sorte' : 'Sorten'} gefunden
+        </Typography>
+
         <Box
           sx={{
             display: 'grid',
@@ -42,7 +98,7 @@ function SortenUebersicht() {
             mt: 2,
           }}
         >
-          {sorten.map((sorte) => (
+          {filteredSorten.map((sorte) => (
             <Card
               key={sorte.slug}
               sx={{ cursor: 'pointer', height: '100%' }}
