@@ -40,7 +40,13 @@ function SortenUebersicht() {
   return (
     <Box id="sorten" sx={{ py: 8 }}>
       <Container>
-        <Typography variant="h3" component="h2" align="center" gutterBottom>
+        <Typography 
+          variant="h2" 
+          component="h2" 
+          align="center" 
+          gutterBottom
+          sx={{ fontSize: { xs: '2.5rem', md: '3.5rem' }, fontWeight: 700 }}
+        >
           Unsere Eissorten
         </Typography>
         
@@ -82,7 +88,12 @@ function SortenUebersicht() {
           </ToggleButtonGroup>
         </Box>
 
-        <Typography variant="body1" align="center" color="text.secondary" sx={{ mb: 3 }}>
+        <Typography 
+          variant="h5" 
+          align="center" 
+          color="text.secondary" 
+          sx={{ mb: 3, fontSize: { xs: '1.25rem', md: '1.5rem' } }}
+        >
           {filteredSorten.length} {filteredSorten.length === 1 ? 'Sorte' : 'Sorten'} gefunden
         </Typography>
 
