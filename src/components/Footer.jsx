@@ -73,6 +73,7 @@ function Footer() {
                 sx={{
                   color: 'rgba(255, 255, 255, 0.9)',
                   lineHeight: 1.6,
+                  fontSize: '1.1rem',
                 }}
               >
                 Ein React-Projekt von Sven, Holger, Eric und Serge!
@@ -107,6 +108,7 @@ function Footer() {
                 sx={{
                   color: 'rgba(255, 255, 255, 0.9)',
                   lineHeight: 1.6,
+                  fontSize: '1.1rem',
                 }}
               >
                 Mo - Fr: 12:00 - 20:00 Uhr
@@ -116,6 +118,7 @@ function Footer() {
                 sx={{
                   color: 'rgba(255, 255, 255, 0.9)',
                   lineHeight: 1.6,
+                  fontSize: '1.1rem',
                 }}
               >
                 Sa - So: 11:00 - 21:00 Uhr
@@ -150,6 +153,7 @@ function Footer() {
                 sx={{
                   color: 'rgba(255, 255, 255, 0.9)',
                   lineHeight: 1.6,
+                  fontSize: '1.1rem',
                 }}
               >
                 📍 Musterstraße 123, 12345 Berlin
@@ -159,6 +163,7 @@ function Footer() {
                 sx={{
                   color: 'rgba(255, 255, 255, 0.9)',
                   lineHeight: 1.6,
+                  fontSize: '1.1rem',
                 }}
               >
                 📞 +49 123 456789
@@ -168,6 +173,7 @@ function Footer() {
                 sx={{
                   color: 'rgba(255, 255, 255, 0.9)',
                   lineHeight: 1.6,
+                  fontSize: '1.1rem',
                 }}
               >
                 ✉️ info@eiskalteshoernchen.de

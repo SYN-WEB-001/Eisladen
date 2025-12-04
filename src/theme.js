@@ -19,20 +19,20 @@ let theme = createTheme({
       fontSize: '2.25rem',
       lineHeight: 1.08
     },
-    // h3: Baloo 2
+    // h3: Baloo 2 (fetter)
     h3: {
       fontFamily: '"Baloo 2", sans-serif',
-      fontWeight: 700,
+      fontWeight: 800,
       fontSize: '1.6rem'
     },
     h4: {
       fontFamily: '"Baloo 2", sans-serif',
       fontWeight: 700
     },
-    // h5: Amatic SC (leicht, warm)
+    // h5: Amatic SC (fetter)
     h5: {
       fontFamily: '"Amatic SC", cursive',
-      fontWeight: 400,
+      fontWeight: 700,
       fontSize: '1.1rem'
     },
     h6: {
@@ -42,14 +42,16 @@ let theme = createTheme({
     // Body / UI: Baloo 2 & Amatic SC
     body1: {
       fontFamily: '"Amatic SC", cursive',
-      fontWeight: 400,
+      fontWeight: 600,
       fontSize: '1rem',
-      lineHeight: 1.5
+      lineHeight: 1.5,
+      color: '#2c2c2c'
     },
     body2: {
       fontFamily: '"Amatic SC", cursive',
-      fontWeight: 300,
-      fontSize: '0.9rem'
+      fontWeight: 600,
+      fontSize: '0.9rem',
+      color: '#2c2c2c'
     },
     // Buttons, small text
     button: {
