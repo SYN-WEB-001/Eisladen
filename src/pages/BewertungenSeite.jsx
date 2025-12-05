@@ -61,15 +61,7 @@ function BewertungenSeite() {
   const durchschnitt = testimonials.length > 0
     ? (testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length).toFixed(1)
     : 0;
-/* reduce — метод массива в JavaScript. Сигнатура:
 
-js
-array.reduce((accumulator, currentValue, currentIndex, array) => { ... }, initialValue)
-accumulator (у тебя sum) — накопитель, куда складываются результаты.
-
-currentValue (у тебя t) — текущий элемент массива.
-
-initialValue (у тебя 0) — начальное значение аккумулятора. */
   // Berechnet die Verteilung der Bewertungen (wie viele 5-Sterne, 4-Sterne, etc.)
   // Erstellt ein Array mit der Anzahl der Bewertungen für jede Sterneanzahl (5 bis 1)
   const ratingCounts = [5, 4, 3, 2, 1].map(stars => 

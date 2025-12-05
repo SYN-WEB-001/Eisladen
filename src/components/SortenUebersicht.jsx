@@ -118,7 +118,7 @@ function SortenUebersicht() {
               <CardMedia
                 component="img"
                 height="200"
-                image={sorte.bild || '/placeholder.jpg'}
+                image={sorte.bild || '/img/cookies.svg'}
                 alt={sorte.name}
                 sx={{
                   objectFit: 'cover',
@@ -126,6 +126,7 @@ function SortenUebersicht() {
                 }}
                 onError={(e) => {
                   e.target.style.display = 'none';
+                  //fallbac
                   e.target.nextElementSibling.style.display = 'flex';
                 }}
               />

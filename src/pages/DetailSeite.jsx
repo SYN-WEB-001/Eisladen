@@ -97,10 +97,12 @@ function DetailSeite() {
                   <Typography variant="h6">{rezension.name}</Typography>
                   <Rating value={rezension.rating} readOnly size="small" />
                 </Box>
-                <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                <Typography variant="body2" sx={{ mb: 1, fontWeight: 500, fontSize: '0.95rem' }}>
                   {rezension.datum}
                 </Typography>
-                <Typography variant="body1">{rezension.text}</Typography>
+                <Typography variant="body1" sx={{ fontWeight: 600, fontSize: '1.05rem', lineHeight: 1.7 }}>
+                  {rezension.text}
+                </Typography>
               </CardContent>
             </Card>
           ))
